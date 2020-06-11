@@ -38,33 +38,88 @@ public class menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem3 = new javax.swing.JMenuItem();
+        jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         menuProductos = new javax.swing.JMenu();
-        subMenuAddProducto = new javax.swing.JMenuItem();
-        subMenuEditProducto = new javax.swing.JMenuItem();
         menuProveedores = new javax.swing.JMenu();
-        subMenuAddProvedor = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem7 = new javax.swing.JMenuItem();
+        jMenuItem8 = new javax.swing.JMenuItem();
+        jMenuItem9 = new javax.swing.JMenuItem();
+        jMenuItem10 = new javax.swing.JMenuItem();
+        jMenuItem11 = new javax.swing.JMenuItem();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
+        jMenu3 = new javax.swing.JMenu();
+        jMenu4 = new javax.swing.JMenu();
 
         jMenuItem3.setText("jMenuItem3");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        menuProductos.setText("Productos");
+        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
+        jDesktopPane1.setLayout(jDesktopPane1Layout);
+        jDesktopPane1Layout.setHorizontalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 800, Short.MAX_VALUE)
+        );
+        jDesktopPane1Layout.setVerticalGroup(
+            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 579, Short.MAX_VALUE)
+        );
 
-        subMenuAddProducto.setText("Agregar");
-        menuProductos.add(subMenuAddProducto);
-
-        subMenuEditProducto.setText("Modificar");
-        menuProductos.add(subMenuEditProducto);
-
+        menuProductos.setText("ABRIR");
         jMenuBar1.add(menuProductos);
 
-        menuProveedores.setText("Proveedores");
+        menuProveedores.setText("CATALOGOS");
 
-        subMenuAddProvedor.setText("Agregar");
-        menuProveedores.add(subMenuAddProvedor);
+        jMenuItem1.setText("MANT. VENDEDORES");
+        menuProveedores.add(jMenuItem1);
+
+        jMenuItem2.setText("MANT. CLIENTES");
+        menuProveedores.add(jMenuItem2);
+
+        jMenuItem4.setText("MANT. PROVEEDORES");
+        menuProveedores.add(jMenuItem4);
+
+        jMenuItem5.setText("MANT. PRODUCTOS");
+        menuProveedores.add(jMenuItem5);
+
+        jMenuItem6.setText("MANT. BODEGA");
+        menuProveedores.add(jMenuItem6);
+
+        jMenuItem7.setText("MANT. MARCAS Y LINEAS");
+        menuProveedores.add(jMenuItem7);
+
+        jMenuItem8.setText("VENTAS ENCABEZADO");
+        menuProveedores.add(jMenuItem8);
+
+        jMenuItem9.setText("VENTAS DETALLE");
+        menuProveedores.add(jMenuItem9);
+
+        jMenuItem10.setText("COMPRAS ENCABEZADO");
+        menuProveedores.add(jMenuItem10);
+
+        jMenuItem11.setText("COMPRAS DETALLE");
+        menuProveedores.add(jMenuItem11);
 
         jMenuBar1.add(menuProveedores);
+
+        jMenu1.setText("PROCESOS");
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("INFORMES");
+        jMenuBar1.add(jMenu2);
+
+        jMenu3.setText("HERRAMIENTAS");
+        jMenuBar1.add(jMenu3);
+
+        jMenu4.setText("AYUDA");
+        jMenuBar1.add(jMenu4);
 
         setJMenuBar(jMenuBar1);
 
@@ -72,11 +127,11 @@ public class menu extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 579, Short.MAX_VALUE)
+            .addComponent(jDesktopPane1)
         );
 
         pack();
@@ -115,12 +170,24 @@ public class menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JDesktopPane jDesktopPane1;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenu jMenu3;
+    private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem10;
+    private javax.swing.JMenuItem jMenuItem11;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
+    private javax.swing.JMenuItem jMenuItem6;
+    private javax.swing.JMenuItem jMenuItem7;
+    private javax.swing.JMenuItem jMenuItem8;
+    private javax.swing.JMenuItem jMenuItem9;
     private javax.swing.JMenu menuProductos;
     private javax.swing.JMenu menuProveedores;
-    private javax.swing.JMenuItem subMenuAddProducto;
-    private javax.swing.JMenuItem subMenuAddProvedor;
-    private javax.swing.JMenuItem subMenuEditProducto;
     // End of variables declaration//GEN-END:variables
 }
