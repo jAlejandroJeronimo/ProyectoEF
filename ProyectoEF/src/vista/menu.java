@@ -20,6 +20,7 @@ public class menu extends javax.swing.JFrame {
     private ventasencabezado nuevaVentana7;
     private ventasdetalle nuevaVentana8;
     private comprasencabezado nuevaVentana9;
+    private comprasdetalle nuevaVentana10;
     
     
     Usuarios mod;
@@ -160,6 +161,11 @@ public class menu extends javax.swing.JFrame {
         menuProveedores.add(jMenuItem10);
 
         jMenuItem11.setText("COMPRAS DETALLE");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
         menuProveedores.add(jMenuItem11);
 
         jMenuBar1.add(menuProveedores);
@@ -236,6 +242,11 @@ public class menu extends javax.swing.JFrame {
         nuevaVentana9 = new comprasencabezado();
         jDesktopPane1.add(nuevaVentana9);
     }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        nuevaVentana10 = new comprasdetalle();
+        jDesktopPane1.add(nuevaVentana10);
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
