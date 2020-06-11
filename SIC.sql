@@ -26,12 +26,14 @@ CREATE TABLE lineas
     nombre_linea VARCHAR(60),
     estatus_linea VARCHAR(1)
 ) ENGINE=INNODB DEFAULT CHARSET=latin1;
+
 CREATE TABLE marcas
 (
 	codigo_marca VARCHAR(5) PRIMARY KEY,
     nombre_marca VARCHAR(60),
     estatus_marca VARCHAR(1)
 ) ENGINE=INNODB DEFAULT CHARSET=latin1;
+
 CREATE TABLE productos
 (
 	codigo_producto VARCHAR(18) PRIMARY KEY,
@@ -43,6 +45,7 @@ CREATE TABLE productos
     FOREIGN KEY (codigo_linea) REFERENCES lineas(codigo_linea),
     FOREIGN KEY (codigo_marca) REFERENCES marcas(codigo_marca)
 ) ENGINE=INNODB DEFAULT CHARSET=latin1;
+
 CREATE TABLE existencias
 (
 	codigo_bodega VARCHAR(5),
@@ -52,6 +55,7 @@ CREATE TABLE existencias
 	FOREIGN KEY (codigo_bodega) REFERENCES bodegas(codigo_bodega),
     FOREIGN KEY (codigo_producto) REFERENCES productos(codigo_producto)
 ) ENGINE=INNODB DEFAULT CHARSET=latin1;
+
 CREATE TABLE vendedores
 (
 	codigo_vendedor VARCHAR(5) PRIMARY KEY,
@@ -61,6 +65,7 @@ CREATE TABLE vendedores
     nit_vendedor VARCHAR(20),
     estatus_vendedor VARCHAR(1)
 ) ENGINE=INNODB DEFAULT CHARSET=latin1;
+
 CREATE TABLE clientes
 (
 	codigo_cliente VARCHAR(5) PRIMARY KEY,
@@ -72,6 +77,7 @@ CREATE TABLE clientes
     estatus_cliente VARCHAR(1),
     FOREIGN KEY (codigo_vendedor) REFERENCES vendedores(codigo_vendedor)
 ) ENGINE=INNODB DEFAULT CHARSET=latin1;
+
 CREATE TABLE proveedores
 (
 	codigo_proveedor VARCHAR(5) PRIMARY KEY,
@@ -81,6 +87,7 @@ CREATE TABLE proveedores
     nit_proveedor VARCHAR(50),
     estatus_proveedor VARCHAR(1)
 ) ENGINE=INNODB DEFAULT CHARSET=latin1;
+
 CREATE TABLE compras_encabezado
 (
 	documento_compraenca VARCHAR(10) PRIMARY KEY,
@@ -90,6 +97,7 @@ CREATE TABLE compras_encabezado
     estatus_compraenca VARCHAR(1),
     FOREIGN KEY (codigo_proveedor) REFERENCES proveedores(codigo_proveedor)
 ) ENGINE=INNODB DEFAULT CHARSET=latin1;
+
 CREATE TABLE compras_detalle
 (
 	documento_compraenca VARCHAR(10),
@@ -102,6 +110,7 @@ CREATE TABLE compras_detalle
     FOREIGN KEY (codigo_producto) REFERENCES productos(codigo_producto),
     FOREIGN KEY (codigo_bodega) REFERENCES bodegas(codigo_bodega)
 ) ENGINE=INNODB DEFAULT CHARSET=latin1;
+
 CREATE TABLE ventas_encabezado
 (
 	documento_ventaenca VARCHAR(10) PRIMARY KEY,
@@ -111,6 +120,7 @@ CREATE TABLE ventas_encabezado
     estatus_ventaenca VARCHAR(1),
     FOREIGN KEY (codigo_cliente) REFERENCES clientes(codigo_cliente)
 ) ENGINE=INNODB DEFAULT CHARSET=latin1;
+
 CREATE TABLE ventas_detalle
 (
 	documento_ventaenca VARCHAR(10),
