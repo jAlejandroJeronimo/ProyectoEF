@@ -11,7 +11,9 @@ import modelo.Usuarios;
  *
  */
 public class menu extends javax.swing.JFrame {
-
+    private mantvendedores nuevaVentana1;
+    
+    
     Usuarios mod;
 
     public menu() {
@@ -78,6 +80,11 @@ public class menu extends javax.swing.JFrame {
         menuProveedores.setText("CATALOGOS");
 
         jMenuItem1.setText("MANT. VENDEDORES");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         menuProveedores.add(jMenuItem1);
 
         jMenuItem2.setText("MANT. CLIENTES");
@@ -136,6 +143,11 @@ public class menu extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        nuevaVentana1 = new mantvendedores();
+        jDesktopPane1.add(nuevaVentana1);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
