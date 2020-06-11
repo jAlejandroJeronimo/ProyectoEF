@@ -15,6 +15,8 @@ public class menu extends javax.swing.JFrame {
     private mantclientes nuevaVentana2;
     private mantproveedores nuevaVentana3;
     private mantproductos nuevaVentana4;
+    private mantbodega nuevaVentana5;
+    private mantmarcasylineas nuevaVentana6;
     
     
     Usuarios mod;
@@ -115,9 +117,19 @@ public class menu extends javax.swing.JFrame {
         menuProveedores.add(jMenuItem5);
 
         jMenuItem6.setText("MANT. BODEGA");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         menuProveedores.add(jMenuItem6);
 
         jMenuItem7.setText("MANT. MARCAS Y LINEAS");
+        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem7ActionPerformed(evt);
+            }
+        });
         menuProveedores.add(jMenuItem7);
 
         jMenuItem8.setText("VENTAS ENCABEZADO");
@@ -181,6 +193,16 @@ public class menu extends javax.swing.JFrame {
         nuevaVentana4 = new mantproductos();
         jDesktopPane1.add(nuevaVentana4);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        nuevaVentana5 = new mantbodega();
+        jDesktopPane1.add(nuevaVentana5);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+        nuevaVentana6 = new mantmarcasylineas();
+        jDesktopPane1.add(nuevaVentana6);
+    }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
