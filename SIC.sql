@@ -1,6 +1,19 @@
-DROP DATABASE sic;
+/*DROP DATABASE sic;*/
+
 CREATE DATABASE sic;
 USE sic;
+
+CREATE TABLE usuarios
+(
+	id int(11) PRIMARY KEY auto_increment,
+    usuario VARCHAR(50),
+    password VARCHAR(50),
+    nombre VARCHAR(50),
+    email VARCHAR(50),
+    last_session VARCHAR(50),
+    idTipo int(11)
+) ENGINE=INNODB DEFAULT CHARSET=latin1;
+
 CREATE TABLE bodegas
 (
 	codigo_bodega VARCHAR(5) PRIMARY KEY,
