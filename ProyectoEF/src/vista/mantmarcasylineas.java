@@ -376,7 +376,7 @@ public class mantmarcasylineas extends javax.swing.JInternalFrame {
 
             nom_l.setText("");
             e_l.setText("");
-            Label_status.setText("REGISTRADO");
+            Label_status1.setText("REGISTRADO");
         }catch (Exception e){
         }
     }//GEN-LAST:event_jButton5ActionPerformed
@@ -392,7 +392,7 @@ public class mantmarcasylineas extends javax.swing.JInternalFrame {
 
             nom_l.setText("");
             e_l.setText("");
-            Label_status.setText("ELIMINADO");
+            Label_status1.setText("ELIMINADO");
 
         } catch (Exception e) {
         }
@@ -410,7 +410,7 @@ public class mantmarcasylineas extends javax.swing.JInternalFrame {
             pst.setString(2, e_l.getText().trim());
             pst.executeUpdate();
 
-            Label_status.setText("Modificación exitosa");
+            Label_status1.setText("Modificación exitosa");
 
         } catch (Exception e) {
         }
