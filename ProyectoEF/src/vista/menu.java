@@ -12,6 +12,8 @@ import modelo.Usuarios;
  */
 public class menu extends javax.swing.JFrame {
     private mantvendedores nuevaVentana1;
+    private mantclientes nuevaVentana2;
+    private mantproveedores nuevaVentana3;
     
     
     Usuarios mod;
@@ -88,9 +90,19 @@ public class menu extends javax.swing.JFrame {
         menuProveedores.add(jMenuItem1);
 
         jMenuItem2.setText("MANT. CLIENTES");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         menuProveedores.add(jMenuItem2);
 
         jMenuItem4.setText("MANT. PROVEEDORES");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         menuProveedores.add(jMenuItem4);
 
         jMenuItem5.setText("MANT. PRODUCTOS");
@@ -148,6 +160,16 @@ public class menu extends javax.swing.JFrame {
         nuevaVentana1 = new mantvendedores();
         jDesktopPane1.add(nuevaVentana1);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        nuevaVentana2 = new mantclientes();
+        jDesktopPane1.add(nuevaVentana2);
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        nuevaVentana3 = new mantproveedores();
+        jDesktopPane1.add(nuevaVentana3);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
